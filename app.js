@@ -49,7 +49,7 @@ function stringProcessing(str) {
         //base = length of codingString
         // algorithm the same as specified above
         // getSymbol(digit, codingString) using operator []
-        
+                                                                        // [Daniel] please send clean code without classwork
 function encode (num,codingString ){
         let res="";
         if (checkCodingString()==false)
@@ -59,7 +59,7 @@ function encode (num,codingString ){
         const base=codingString.length;
         const digit=Math.trunc(num%base);
         const codingStringI=codingString[digit];
-        const symb=getSymbol(codingStringI);
+        const symb=getSymbol(codingStringI);                            // [Daniel] Not needed at all if previous line already performed
         res=symb+res;
         num=Math.trunc(num/base);
         }while(num>=1);
@@ -75,8 +75,9 @@ function checkCodingString(codingString){
        { console.log(j);
 if(codingString[i]===codingString[j]) return false;
 
-else return true;
+else return true;                                                       // [Daniel] 'else' is never needed after return
       }
 }      
 }
 console.log(encode(3,["s","d","s","n"]));
+                                                                        // [Daniel] The rest of code is good
